@@ -7,7 +7,8 @@ function ProductState({children}) {
 
     const  fetchProducList = useCallback( async()=>{
       try{
-        let response = await fetch('https://dummyjson.com/products?limit=100')
+        // let response = await fetch('https://dummyjson.com/products?limit=100')
+            let response = await fetch('https://content.newtonschool.co/v1/pr/63b6c911af4f30335b4b3b89/products')
         let data = await response.json();
        
         setProductList([...data.products]);
